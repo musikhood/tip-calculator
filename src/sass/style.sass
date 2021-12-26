@@ -5,11 +5,13 @@ body
     background-color: var(--light-grayish-cyan-one)
     height: 100vh
     width: 100vw
-    min-height: 800px
+    min-height: 400px
     min-width: 350px
     display: flex
     justify-content: center
     align-items: center
+    @media (max-width: 800px)
+        min-height: 800px
 
 .app
     width: 800px
