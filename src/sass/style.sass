@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap')
+@import "variables"
+
+body
+    background-color: var(--light-grayish-cyan-one)
+
+.app
+    width: 800px
+    height: 400px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    display: flex
+    gap: 25px
+    border-radius: 25px
+    background-color: var(--white)
+    padding: 25px
+    @media (max-width: 800px)
+        width: 350px
+        height: auto
+        flex-direction: column
+    @media (max-width: 350px)
+        left: 0
+        transform: translate(0,-50%)
+    &__label
+        width: 100%
+        display: flex
+        justify-content: space-between
+        font-weight: bold
+        color: var(--dark-grayish-cyan-one)
+    &__error
+        color: rgba(220,0,0,0.7)
+    &__text
+        width: 100%
+        text-align: right
+        padding: 0 20px
+        font-size: 24px
+        background-repeat: no-repeat
+        background-position: 20px center
+        background-color: var(--light-grayish-cyan-two)
+        border: none
+        border-radius: 5px
+        outline-color: var(--strong-cyan)
+        color: var(--very-dark-cyan)
+        font-weight: bold
+        &:focus
+            outline-style: solid
+            outline-width: 2px
+        &::placeholder
+            opacity: 0.6
+    &__select
+        width: 100%
+        @media (max-width: 800px)
+            margin: 40px 0
+        & p
+            font-weight: bold
+            color: var(--dark-grayish-cyan-one)
+    &__tip
+        display: grid
+        grid-template-columns: repeat(3,calc(33% - 10px))
+        gap: 15px
+        margin-top: 15px
+        @media (max-width: 800px)
+            grid-template-columns: repeat(2,calc(50% - 15px))
+            gap: 15px
+        & button
+            padding: 2px 0
+            background-color: var(--very-dark-cyan)
+            color: white
+            font-weight: bold
+            font-size: 24px
+            border: none
+            border-radius: 5px
+            outline: none
+            cursor: pointer
+            transition: all .2s
+            &:hover
+                color: var(--very-dark-cyan)
+                background-color: rgba(38, 192, 171,0.4)
+            &.active
+                color: var(--very-dark-cyan)
+                background-color: var(--strong-cyan)
+        & input
+            border: none
+            border-radius: 5px
+            outline: none
+            background-color: var(--light-grayish-cyan-two)
+            color: var(--very-dark-cyan)
+            font-size: 24px
+            font-weight: bold
+            text-align: right
+            padding: 0 10px
+            &::placeholder
+                text-align: center
+    &__left
+        width: 50%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        @media (max-width: 800px)
+            width: 100%
+    &__right
+        width: 50%
+        height: 100%
+        border-radius: 15px
+        background-color: var(--very-dark-cyan)
+        display: flex
+        flex-direction: column
+        padding: 0 30px
+        justify-content: space-between
+        @media (max-width: 800px)
+            width: 100%
+        & button
+            margin-bottom: 40px
+            font-size: 24px
+            font-weight: bold
+            color: var(--very-dark-cyan)
+            background-color: var(--strong-cyan)
+            border: none
+            border-radius: 5px
+            cursor: pointer
+            padding: 2px 0
+            &:hover
+                background-color: var(--light-grayish-cyan-one)
+
+    &__stats
+        margin-top: 40px
+        & label
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 20px
+            & div
+                & p
+                    font-weight: bold
+                    color: var(--white)
+                & p.person
+                    color: var(--dark-grayish-cyan-one)
+                    font-size: 0.9rem
+            & h1
+                font-size: 2.6rem
+                color: var(--strong-cyan)
+                @media (max-width: 800px)
+                    font-size: 1.9rem
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+input[type=number]
+    -moz-appearance: textfield
