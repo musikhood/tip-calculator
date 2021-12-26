@@ -75,10 +75,6 @@ body {
   color: var(--dark-grayish-cyan-one);
 }
 
-.app__error {
-  color: rgba(220, 0, 0, 0.7);
-}
-
 .app__text {
   width: 100%;
   text-align: right;
@@ -174,7 +170,7 @@ body {
 .app__tip input {
   border: none;
   border-radius: 5px;
-  outline: none;
+  outline-color: var(--strong-cyan);
   background-color: var(--light-grayish-cyan-two);
   color: var(--very-dark-cyan);
   font-size: 24px;
@@ -197,6 +193,11 @@ body {
 
 .app__tip input::placeholder {
   text-align: center;
+}
+
+.app__tip input:focus {
+  outline-style: solid;
+  outline-width: 2px;
 }
 
 .app__left {

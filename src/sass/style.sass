@@ -33,8 +33,6 @@ body
         justify-content: space-between
         font-weight: bold
         color: var(--dark-grayish-cyan-one)
-    &__error
-        color: rgba(220,0,0,0.7)
     &__text
         width: 100%
         text-align: right
@@ -88,7 +86,7 @@ body
         & input
             border: none
             border-radius: 5px
-            outline: none
+            outline-color: var(--strong-cyan)
             background-color: var(--light-grayish-cyan-two)
             color: var(--very-dark-cyan)
             font-size: 24px
@@ -97,6 +95,10 @@ body
             padding: 0 10px
             &::placeholder
                 text-align: center
+            &:focus
+                outline-style: solid
+                outline-width: 2px
+
     &__left
         width: 50%
         height: 100%

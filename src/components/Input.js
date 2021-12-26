@@ -20,7 +20,7 @@ function Input({name,val,setVal,picture}) {
      <label className="app__input">
        <div className='app__label'>
          <p>{name}</p>
-         {error && <p className='app__error'>Can't be zero</p>}
+         {error && <p style={{color: "rgba(220,0,0,0.7)"}}>Can't be zero</p>}
        </div>
       <input 
         type="number" 
